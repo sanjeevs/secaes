@@ -1,0 +1,4 @@
+class OutputEncrPacket
+  def initialize
+  end
+end
