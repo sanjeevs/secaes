@@ -33,6 +33,27 @@ class InputCookie
 
 end
 
+class PthruInputCookie 
+  attr_reader :value
+
+  def initialize
+    @value = "0x0000000000000000"
+  end
+
+  def to_json(args)
+    continue = args[:continue] || false
+    <<-eos
+    { 
+      "type" : "input_cookie",
+      "cmd" : "PTHRU",
+      "dir" : "TX",
+      "value" : "#{value}"
+    }#{"," if continue}
+  eos
+  end
+end
+
+
 class EspTxInputCookie < InputCookie
   attr_reader :pad_len, :nxt_hdr
   def post_initialize(args)
