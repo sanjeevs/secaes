@@ -1,8 +1,8 @@
-require_relative "state_header"
+require_relative "../lib/state_header.rb"
 require 'minitest/autorun'
 require 'json'
 
-class TestStateHeader < MiniTest::Unit::TestCase
+class TestStateHeader < MiniTest::Test
   def setup
     @state_header = StateHeader.new(sn: 0x01234567)
   end

@@ -1,4 +1,4 @@
-# Input packet.
+# Input packet for ipsec tunnels..
 # For testing this will always be the clear packet with state header.
 
 class InputClearStatePacket

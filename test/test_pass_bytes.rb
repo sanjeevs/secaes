@@ -1,8 +1,8 @@
-require_relative "pass_bytes"
+require_relative "../lib/pass_bytes"
 require 'minitest/autorun'
 require 'json'
 
-class TestPassBytes < MiniTest::Unit::TestCase
+class TestPassBytes < MiniTest::Test
   def setup
     @pass_bytes = PassBytes.new(32)
   end

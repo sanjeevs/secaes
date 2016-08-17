@@ -1,8 +1,8 @@
-require_relative "input_cookie"
+require_relative "../lib/input_cookie"
 require 'minitest/autorun'
 require 'json'
 
-class EspTxInputCookieTest < MiniTest::Unit::TestCase
+class EspTxInputCookieTest < MiniTest::Test
   def setup
     @esp_tx = EspTxInputCookie.new(nxt_hdr: 0x20,
                               tunnel_id: 0x01234567)

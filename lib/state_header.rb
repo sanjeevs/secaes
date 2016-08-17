@@ -1,3 +1,4 @@
+# State header for the input packet.
 class StateHeader
   attr_reader :no_ciph, :icv_size, :auth_only, :key256, :use_esn, :sn , :spi
   attr_reader :salt, :iv, :key
